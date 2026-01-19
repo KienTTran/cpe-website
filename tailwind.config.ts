@@ -4,7 +4,7 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Aptos', 'sans-serif'], // Use Aptos as default sans
+        sans: ['Aptos', 'sans-serif'],
       },
     },
   },
