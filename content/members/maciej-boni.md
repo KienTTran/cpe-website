@@ -1,7 +1,7 @@
 ---
 name: 'Maciej Boni'
 role: 'Co-director Center for Pathogen Evolution'
-avatar: '/images/maciek-boni.jpg'
+avatar: '/images/maciej-boni.jpg'
 email: 'mboni@temple.edu'
 google_scholar: 'https://scholar.google.com/citations?hl=en&user=Xll-AbQAAAAJ&view_op=list_works&sortby=pubdate'
 cv: 'https://mol.ax/pub/' # Please add Maciek Boni's CV link here

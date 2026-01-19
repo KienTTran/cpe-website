@@ -7,9 +7,9 @@ export default function Home() {
     <div className="container mx-auto px-4 py-8">
       {/* Header Section */}
       
-      {/* Image interactive section */}
+      {/* First Four Images on Front Page */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
-        <InteractiveImage src="/images/protect-the-cure.jpg" alt="Protect the Cure" text="Protect the cure" linkHref="/people" linkText="Link 1" />
+        <InteractiveImage src="/images/protect-the-cure.jpg" alt="Protect the Cure" text="Protect the Cure Workshops in Accra (Dec 5 2025) and Dakar (Dec 10 2025)" linkHref="/people" linkText="Read here about the workshops run by Impact Santé Afrique on helping West African countries prepare for the arrival of artemisinin-resistant malaria" />
         <InteractiveImage src="/images/logo.png" alt="Center of Pathogen Evolution" text="Center of Pathogen Evolution" linkHref="/people" linkText="Link 2" />
       </section>
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
