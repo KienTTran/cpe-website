@@ -11,8 +11,8 @@ export default function Home() {
       {/* Intro with Image Section */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
         <div>
-          <h2 className="text-4xl font-extrabold text-temple-red mb-6 pb-2 border-b-2 border-temple-red">Center of Pathogen Evolution at Temple University</h2>
-          <p className="text-lg text-gray-700 font-light">
+          <h2 className="text-4xl font-bold text-temple-red mb-6 pb-2 border-b-2 border-temple-red">Center of Pathogen Evolution at Temple University</h2>
+          <p className="text-lg text-gray-700">
             We use computational, modeling, and interdisciplinary approaches to advance the understanding of pathogen evolution, inform strategies for disease prevention, treatment, and enhance public health preparedness.
           </p>
         </div>

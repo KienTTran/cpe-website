@@ -1,6 +1,6 @@
 # CPE Website
 
-This is the official website for the Computational Phylogenetics and Evolution (CPE) group.
+This is the official website for Temple University's Center for Pathogen Evolution (CPE).
 
 ## Table of Contents
 
