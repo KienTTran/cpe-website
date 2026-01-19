@@ -20,7 +20,7 @@ export default async function TeamPage() {
       <h1 className="text-3xl font-bold mb-8 text-center">Our Team</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {sortedMembers.map((member: MemberItem) => (
-          <div key={member.id} className="bg-dark-gray text-white p-6 rounded-lg shadow-xl border-2 border-temple-red flex flex-col items-center text-center font-mono relative overflow-hidden">
+          <div key={member.id} className="bg-dark-gray text-white p-6 rounded-lg shadow-xl border-2 border-temple-red flex flex-col items-center text-center relative overflow-hidden">
             {/* Decorative top border */}
             <div className="absolute top-0 left-0 w-full h-2 bg-temple-red"></div>
             {/* Decorative bottom border */}

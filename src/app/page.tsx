@@ -1,13 +1,30 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import InteractiveImage from '../components/InteractiveImage'; // Add this import
 
 export default function Home() {
   return (
     <div className="container mx-auto px-4 py-8">
       {/* Header Section */}
-
       
+      {/* Image interactive section */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+        <InteractiveImage src="/images/protect-the-cure.jpg" alt="Protect the Cure" text="Protect the cure" linkHref="/people" linkText="Link 1" />
+        <InteractiveImage src="/images/logo.png" alt="Center of Pathogen Evolution" text="Center of Pathogen Evolution" linkHref="/people" linkText="Link 2" />
+      </section>
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
+        <InteractiveImage src="/images/logo.png" alt="Center of Pathogen Evolution" text="Center of Pathogen Evolution" linkHref="/people" linkText="Link 3" />
+        <InteractiveImage src="/images/logo.png" alt="Center of Pathogen Evolution" text="Center of Pathogen Evolution" linkHref="/people" linkText="Link 4" />
+      </section>
 
+      {/* Pathogens and Evolutionary Questions Section */}
+      <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <div>
+        </div>
+        <div>
+        </div>
+      </section>
+      
       {/* Intro with Image Section */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-12">
         <div>
