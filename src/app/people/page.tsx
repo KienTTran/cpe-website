@@ -4,20 +4,16 @@ import Image from 'next/image';
 export default async function TeamPage() {
   const members = await getMembers();
 
-  // Sort members: directors first, then by name
+  // Sort members: those with sort_order 0 first, then by sort_order ascending
   const sortedMembers = members.sort((a: MemberItem, b: MemberItem) => {
-    if (a.role === 'Co-director Center for Pathogen Evolution' && b.role !== 'Co-director Center for Pathogen Evolution') {
-      return -1;
-    }
-    if (a.role !== 'Co-director Center for Pathogen Evolution' && b.role === 'Co-director Center for Pathogen Evolution') {
-      return 1;
-    }
-    return a.name.localeCompare(b.name); // Sort alphabetically by name for others
+    if (a.display_order === 0 && b.display_order !== 0) return -1;
+    if (b.display_order === 0 && a.display_order !== 0) return 1;
+    return a.display_order - b.display_order;
   });
 
   return (
     <section>
-      <h1 className="text-3xl font-bold mb-8 text-center">Core Center Members</h1>
+      <h1 className="text-3xl font-bold mb-8 text-center">Our Team</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {sortedMembers.map((member: MemberItem) => (
           <div key={member.id} className="bg-dark-gray text-white p-6 rounded-lg shadow-xl border-2 border-temple-red flex flex-col items-center text-center relative overflow-hidden">
@@ -26,13 +22,14 @@ export default async function TeamPage() {
             {/* Decorative bottom border */}
             <div className="absolute bottom-0 left-0 w-full h-2 bg-temple-red"></div>
 
-            <Image
-              src={member.avatar}
-              alt={`Photo of ${member.name}`}
-              width={150}
-              height={150}
-              className="rounded-full mb-4 object-cover border-4 border-gray-600 shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:border-temple-red"
-            />
+            <div className="relative w-[150px] h-[200px] rounded-full overflow-hidden mb-4 border-4 border-gray-600 shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:border-temple-red">
+              <Image
+                src={member.avatar}
+                alt={`Photo of ${member.name}`}
+                fill
+                className="object-cover object-center"
+              />
+            </div>
             <h2 className="text-3xl font-bold text-temple-red uppercase mb-1">{member.name}</h2>
             <p className="text-gray-300 text-lg mb-4">{member.role}</p>
 

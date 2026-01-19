@@ -104,6 +104,7 @@ export interface MemberItem {
   date: string; // Add this line
   google_scholar?: string;
   cv?: string;
+  display_order: number;
 }
 
 export function getMembers(): Promise<MemberItem[]> {
