@@ -6,10 +6,10 @@ export default async function TeamPage() {
 
   // Sort members: directors first, then by name
   const sortedMembers = members.sort((a: MemberItem, b: MemberItem) => {
-    if (a.role === 'Co-director' && b.role !== 'Co-director') {
+    if (a.role === 'Co-director Center for Pathogen Evolution' && b.role !== 'Co-director Center for Pathogen Evolution') {
       return -1;
     }
-    if (a.role !== 'Co-director' && b.role === 'Co-director') {
+    if (a.role !== 'Co-director Center for Pathogen Evolution' && b.role === 'Co-director Center for Pathogen Evolution') {
       return 1;
     }
     return a.name.localeCompare(b.name); // Sort alphabetically by name for others
@@ -17,7 +17,7 @@ export default async function TeamPage() {
 
   return (
     <section>
-      <h1 className="text-3xl font-bold mb-8 text-center">Our Team</h1>
+      <h1 className="text-3xl font-bold mb-8 text-center">Core Center Members</h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
         {sortedMembers.map((member: MemberItem) => (
           <div key={member.id} className="bg-dark-gray text-white p-6 rounded-lg shadow-xl border-2 border-temple-red flex flex-col items-center text-center font-mono relative overflow-hidden">
